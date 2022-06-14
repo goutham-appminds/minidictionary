@@ -11,17 +11,19 @@ Object {
         <h1>
           MINI DICTIONARY
         </h1>
-        <input
-          class="text"
-          placeholder="search here.."
-        />
-        <button
-          class="btn"
-          data-testid="search"
-          type="button"
-        >
-          Search
-        </button>
+        <form>
+          <input
+            class="text"
+            placeholder="search here.."
+          />
+          <button
+            class="btn"
+            data-testid="search"
+            type="submit"
+          >
+            Search
+          </button>
+        </form>
       </div>
     </div>
   </body>,
@@ -32,17 +34,19 @@ Object {
       <h1>
         MINI DICTIONARY
       </h1>
-      <input
-        class="text"
-        placeholder="search here.."
-      />
-      <button
-        class="btn"
-        data-testid="search"
-        type="button"
-      >
-        Search
-      </button>
+      <form>
+        <input
+          class="text"
+          placeholder="search here.."
+        />
+        <button
+          class="btn"
+          data-testid="search"
+          type="submit"
+        >
+          Search
+        </button>
+      </form>
     </div>
   </div>,
   "debug": [Function],

@@ -12,7 +12,8 @@ function Search() {
   const [loading, setLoading] = useState(false);
 
   // GET API For search data
-  const searchWord = async () => {
+  const searchWord = async (event) => {
+    event.preventDefault();
     if (word === '') {
       setError({
         title: 'Please enter the word to search',
@@ -46,14 +47,16 @@ function Search() {
   return (
     <div className="page">
       <h1>MINI DICTIONARY</h1>
-      <input
-        className="text"
-        placeholder="search here.."
-        onChange={handleText}
-      />
-      <button type="button" className="btn" onClick={searchWord} disabled={loading} data-testid="search">
-        {loading ? 'Loading ...' : 'Search'}
-      </button>
+      <form onSubmit={searchWord}>
+        <input
+          className="text"
+          placeholder="search here.."
+          onChange={handleText}
+        />
+        <button type="submit" className="btn" disabled={loading} data-testid="search">
+          {loading ? 'Loading ...' : 'Search'}
+        </button>
+      </form>
 
       {
         Boolean(error) && (
